@@ -1,9 +1,15 @@
-function App() {
-  return (
-    <div>
-      <h1 className="font-bold">Template React Tailwind</h1>
-    </div>
-  );
-}
+import PropTypes from 'prop-types';
 
-export default App;
+const RenderName = (props) => {
+	return <div>{props.name}</div>;
+};
+
+RenderName.propTypes = {
+	name: PropTypes.string,
+};
+
+RenderName.defaultProps = {
+	name: 'Zach',
+};
+
+export default RenderName;
